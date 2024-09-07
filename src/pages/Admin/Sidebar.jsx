@@ -20,10 +20,9 @@ export default function Navigation() {
   };
   const openCongratsModal = () => setActiveModal("congrats");
 
-    // Modal control functions
-    const openModal = (modalName) => setActiveModal(modalName);
-    const closeModal = () => setActiveModal("");
-  
+  // Modal control functions
+  const openModal = (modalName) => setActiveModal(modalName);
+  const closeModal = () => setActiveModal("");
 
   const Logo = () => (
     <div className={styles.logo}>
@@ -32,81 +31,90 @@ export default function Navigation() {
   );
 
   // Navigation Links Component
-const NavLinks = ({ onOpenModal }) => (
-  <nav className={styles.links}>
-    <NavLink
-      to="/admin"
-      className={({ isActive }) => (isActive ? styles.active : "")}
-    >
-      <p className={styles.title}>Dashboard</p>
-    </NavLink>
+  const NavLinks = ({ onOpenModal }) => (
+    <nav className={styles.links}>
+      <NavLink
+        to="/admin"
+        className={({ isActive }) => (isActive ? styles.active : "")}
+      >
+        <p className={styles.title}>Dashboard</p>
+      </NavLink>
 
-    <NavLink
-      to="/admin/analytics"
-      className={({ isActive }) => (isActive ? styles.active : "")}
-    >
-      <p className={styles.title}>Analytics</p>
-    </NavLink>
+      <NavLink
+        to="/admin/analytics"
+        className={({ isActive }) => (isActive ? styles.active : "")}
+      >
+        <p className={styles.title}>Analytics</p>
+      </NavLink>
 
-    <NavLink
+      {/* <NavLink
       to="/admin/createQuiz"
       className={({ isActive }) => (isActive ? styles.active : "")}
-      onClick={() => onOpenModal("first")}
-    >
-      <p className={styles.title}>Create Quiz</p>
-    </NavLink>
-  </nav>
-);
+      // onClick={() => onOpenModal("first")}
+      onClick={() => setCloseModal1(true)}
+    > */}
+      <p className={styles.title} onClick={() => setCloseModal1(true)}>
+        Create Quiz
+      </p>
+      {/* </NavLink> */}
+    </nav>
+  );
 
-// Logout Button Component
-const LogoutButton = ({ onLogout }) => (
-  <div className={styles.logout}>
-    <p onClick={onLogout} className={styles.logoutText}>
-      LOGOUT
-    </p>
-  </div>
-);
+  // Logout Button Component
+  const LogoutButton = ({ onLogout }) => (
+    <div className={styles.logout}>
+      <p onClick={onLogout} className={styles.logoutText}>
+        LOGOUT
+      </p>
+    </div>
+  );
 
+  const [closeModal1, setCloseModal1] = useState(false);
+  console.log(closeModal1);
+  // Modal Management Component
+  // const Modals = ({ activeModal, onCloseModal, onOpenModal }) => (
+  //   <>
+  //     {closeModal1 && (
+  //       <QuizModal
+  //         onClose={closeModal1}
+  //         setCloseModal1={setCloseModal1}
+  //         onContinue={() => onOpenModal("createQuiz")}
+  //       />
+  //     )}
 
-// Modal Management Component
-const Modals = ({ activeModal, onCloseModal, onOpenModal }) => (
-  <>
-    {activeModal === "first" && (
-      <QuizModal
-        onCancel={setActiveModal}
-        onContinue={() => onOpenModal("createQuiz")}
-      />
-    )}
+  //     {activeModal === "createQuiz" && (
+  //       <CreateQuizModal
+  //         defaultQuiz={{ title: "", type: "q&a" }}
+  //         onCancel={() => onCloseModal()}
+  //         onCreateQuiz={() => onOpenModal("congrats")}
+  //       />
+  //     )}
 
-    {activeModal === "createQuiz" && (
-      <CreateQuizModal
-        defaultQuiz={{ title: "", type: "q&a" }}
-        onCancel={() => onCloseModal()}
-        onCreateQuiz={() => onOpenModal("congrats")}
-      />
-    )}
+  //     {activeModal === "congrats" && (
+  //       <div className={styles.congratsModal}>
+  //         <p>Congratulations! Your quiz has been created.</p>
+  //         <button onClick={onCloseModal}>Close</button>
+  //       </div>
+  //     )}
+  //   </>
+  // );
 
-    {activeModal === "congrats" && (
-      <div className={styles.congratsModal}>
-        <p>Congratulations! Your quiz has been created.</p>
-        <button onClick={onCloseModal}>Close</button>
-      </div>
-    )}
-  </>
-);
-
-  
   return (
     <>
       <div className={styles.container}>
-           <Logo />
+        <Logo />
 
-           <NavLinks onOpenModal={openModal} />
+        <NavLinks onOpenModal={openModal} />
 
-           <LogoutButton onLogout={logout} />
+        <LogoutButton onLogout={logout} />
 
-           <Modals activeModal={activeModal} onCloseModal={closeModal} onOpenModal={openModal} />
-
+        {closeModal1 && (
+          <QuizModal
+            onClose={closeModal1}
+            setCloseModal1={setCloseModal1}
+            onContinue={() => onOpenModal("createQuiz")}
+          />
+        )}
       </div>
     </>
   );

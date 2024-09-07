@@ -46,15 +46,15 @@ const router = createBrowserRouter([
           </QuizProvider>
         ),
       },
-      {
-        index: true,
-        path: 'createQuiz',
-        element: (
-          <QuizProvider>
-              <CreateQuiz />
-          </QuizProvider>
-        ),
-      },
+      // {
+      //   index: true,
+      //   path: 'createQuiz',
+      //   element: (
+      //     <QuizProvider>
+      //         <CreateQuiz />
+      //     </QuizProvider>
+      //   ),
+      // },
       {
         path: 'analytics',
         element: <Analytics />,
