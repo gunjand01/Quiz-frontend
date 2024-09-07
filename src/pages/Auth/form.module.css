@@ -1,0 +1,26 @@
+
+
+   body{
+    background-color: #F2F2F2;
+   }
+
+   .container {
+    position: fixed;
+    padding: 20px;
+    margin-left: 300px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navigation {
+    margin-bottom: 20px;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 80px; 
+  }
+  
+

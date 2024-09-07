@@ -1,0 +1,94 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  background: white;
+  padding: 50px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  margin-bottom: 20px;
+}
+
+.radioGroup {
+  margin-bottom: 20px;
+  display: flex;
+  color: #9F9F9F;
+  padding-left: 10px;
+}
+
+.radioOptions {
+  display: flex;
+  margin-left: 100px;
+  gap: 50px;
+}
+
+.radioOption {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.radioOption p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.checkedOption {
+  background: #60B84B; /* Light green background for selected option */
+  color: white;
+  /* box-shadow: 0 0 5px rgba(0, 204, 0, 0.3); */
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.buttonGroup button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+
+.buttonGroup button:first-child {
+  background: white; /* Red color for Cancel */
+  color:  #474444;
+}
+
+.buttonGroup button:last-child {
+  background: #60B84B; /* Green color for Continue */
+  color: white;
+}
+
+.buttonGroup button:hover {
+  opacity: 0.8;
+}
+
+.buttonGroup button:focus {
+  outline: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}

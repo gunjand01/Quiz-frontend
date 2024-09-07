@@ -1,0 +1,17 @@
+.input {
+    background-color: white;
+    border: none;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; /* Optional: Adds rounded corners */
+    padding: 12px 20px;
+    width: 90%;
+    font-size: 16px;
+    color: #333;
+    outline: none; /* Removes the default focus outline */
+  }
+  
+  .input:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  

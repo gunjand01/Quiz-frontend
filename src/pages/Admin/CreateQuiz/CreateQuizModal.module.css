@@ -1,0 +1,77 @@
+/* .container {
+    
+  } */
+  
+  .modalBackground {
+    background: rgba(0, 0, 0, 0.5); /* Light transparent black shade */
+  }
+  
+  .input {
+    margin-bottom: 16px;
+  }
+  
+  .radioGroup {
+    margin-bottom: 16px;
+  }
+  
+  .radioOptions {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .radioOption {
+    cursor: pointer;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .checkedOption {
+    border-color: #007bff;
+  }
+  
+  .questions {
+    margin-bottom: 16px;
+  }
+  
+  .question {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .questionInput {
+    flex: 1;
+  }
+  
+  .options {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+  
+  .option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .optionInput {
+    flex: 1;
+  }
+  
+  .addButton {
+    margin-top: 8px;
+  }
+  
+  .timerInput {
+    margin-bottom: 16px;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 8px;
+  }
+  

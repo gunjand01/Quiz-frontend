@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.heading {
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: -0.00625em;
+  line-height: 30px;
+  color:#474444;
+}
+
+.title {
+  font-weight: bold; /* Make titles bold */
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 24px;
+  text-align: center;
+  color: #474444;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  ;
+  text-decoration: none;
+  margin-left: 60px;
+}
+
+.logo {
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo .image {
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+}
+
+.links > *:hover,
+.active {
+  background-color: white;
+  opacity: 1;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);/* Add box shadow to active link */
+  border-radius: 8px; /* Optional: add border radius for smoother look */
+}
+
+.links > *,
+.logout {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.logout {
+  color: black;
+  margin-top: auto;
+  cursor: pointer;
+  border-top: 1px solid black; /* Add a black line above LOGOUT */
+}
+
+.logoutText {
+  font-size: 20px;
+  letter-spacing: 0em;
+  line-height: 24px;
+  font-weight: 700;
+  margin-left: 60px;
+}
+
+.warning {
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: -0.0025em;
+  line-height: 26px;
+}
+
+.logoutActions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logout:hover {
+  background-color: #ff0b0b10;
+}
